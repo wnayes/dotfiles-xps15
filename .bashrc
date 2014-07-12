@@ -16,28 +16,8 @@ GPG_TTY=$(tty)
 export GPG_TTY
 
 # Aliases
-alias ls='ls -F --color=auto'
-alias lal='ls -al'
-alias grep='grep --color=auto'
-alias rm='rm -i'
-
-alias poweroff='systemctl poweroff'
-alias reboot='systemctl reboot'
-
-alias battery='acpi -b'
-
-alias .git='git --work-tree=$HOME --git-dir=$HOME/.files.git'
-
-alias nctlhome='sudo netctl start buffalo'
-alias nctlapt='sudo netctl start dlink'
-alias nctlumn='sudo netctl start umnsecure'
-alias nctlstop='sudo netctl stop-all'
-alias pingtest='ping -c 4 www.google.com'
-
-alias pacupg='sudo pacman -Syu'
-alias pacinst='sudo pacman -S'
-alias pacinfo='pacman -Qi'
-alias pacorphans='pacman -Qdt'
+. ~/.aliases
+. ~/.wine_aliases
 
 # Prompt formatting
 #PS1='\u@\h \W\$ '

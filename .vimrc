@@ -63,6 +63,9 @@ set noerrorbells
 set nobackup
 set noswapfile
 
+" Filetype associations
+autocmd BufNewFile,BufRead *.jsm set filetype=javascript
+
 " Trailing whitespace detection
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/

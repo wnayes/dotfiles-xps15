@@ -11,6 +11,11 @@ fi
 # Ensure .Xresources gets loaded.
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
+# Remapping keyboard
+if [ -s ~/.Xmodmap ]; then
+  xmodmap ~/.Xmodmap
+fi
+
 # Start gpg-agent
 eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
 if [ -f "${HOME}/.gpg-agent-info" ]; then
@@ -23,6 +28,10 @@ optirun true
 intel-virtual-output
 xrandr --output VIRTUAL2 --left-of HDMI1 --mode 1920x1080 --auto
 xrandr --output LVDS1 --off
+
+# Transparency
+xcompmgr &
+#unagi &
 
 exec awesome
 
