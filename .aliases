@@ -23,7 +23,11 @@ alias nctlstop='sudo netctl stop-all'
 alias pingtest='ping -c 4 www.google.com'
 
 # Pacman
-alias pacupg='sudo pacman -Syu'
+alias pacupg='sudo pacman -Syu --ignore xf86-video-intel,xorg-server,xorg-server-common,xf86-input-evdev,xf86-input-synaptics'
 alias pacinst='sudo pacman -S'
 alias pacinfo='pacman -Qi'
 alias pacorphans='pacman -Qdt'
+
+# youtube-dl
+alias youtube-dl-formats='youtube-dl -F --youtube-include-dash-manifest --no-check-certificate'
+alias youtube-dl-dash='youtube-dl --youtube-include-dash-manifest --no-check-certificate'

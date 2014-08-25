@@ -16,13 +16,23 @@ awful.rules.rules = {
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
+
+    -- Instantbird layout with buddy list and account manager
+    -- { rule = { class = "Instantbird" },
+    --  properties = { tag = tags[1][8] } },
+
+    -- Thunderbird on last tag.
+    { rule = { class = "Thunderbird" },
+      properties = { tag = tags[1][9] } },
+
+    -- Desktop web background.
     { rule = { class = "Nw" },
       properties = { below = true,
                      maximized = true,
-                     x = 0,
-                     y = 19,
-                     height = 1061,
-                     width = 3840,
+                     -- x = 0,
+                     --y = 19,
+                     -- height = 1061,
+                     -- width = 3840,
                     -- floating = true,
                      sticky = true,
                      -- focusable = false,

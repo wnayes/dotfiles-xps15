@@ -26,7 +26,7 @@ fi
 # Start Bumblebee, create VIRTUAL display, and configure monitors.
 optirun true
 intel-virtual-output
-xrandr --output VIRTUAL2 --left-of HDMI1 --mode 1920x1080 --auto
+xrandr --output VIRTUAL2 --right-of HDMI1 --mode 1920x1080 --auto
 xrandr --output LVDS1 --off
 
 # Transparency

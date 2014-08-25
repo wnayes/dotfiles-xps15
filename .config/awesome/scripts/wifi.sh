@@ -7,6 +7,16 @@ symbol=( $(echo -e "\u21C5") )
 
 active=$(netctl list | grep '*' | cut -d' ' -f 2)
 
+# If netctl is not active, check if dhcpcd is.
+if [[ -z "$active" ]]
+then
+  active=$(systemctl status dhcpcd@enp6s0 | grep 'Active: active (running)')
+  if [[ -n "$active" ]]
+  then
+    active="dhcpcd"
+  fi
+fi
+
 if [[ -z "$active" ]]
 then
   symbolColor=$none
