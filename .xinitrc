@@ -16,6 +16,10 @@ if [ -s ~/.Xmodmap ]; then
   xmodmap ~/.Xmodmap
 fi
 
+# Use aliases from WM
+source ~/.aliases
+source ~/.wine_aliases
+
 # Start gpg-agent
 eval $(gpg-agent --daemon --write-env-file "${HOME}/.gpg-agent-info")
 if [ -f "${HOME}/.gpg-agent-info" ]; then
@@ -31,7 +35,6 @@ xrandr --output LVDS1 --off
 
 # Transparency
 xcompmgr &
-#unagi &
 
 exec awesome
 

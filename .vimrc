@@ -32,7 +32,7 @@ set colorcolumn=80
 filetype indent on
 
 " Automatically wrap
-set textwidth=80
+" set textwidth=80
 
 " Change the terminal's title
 set title

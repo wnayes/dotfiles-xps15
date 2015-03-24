@@ -1,9 +1,12 @@
 -- Launch some chromeless web browsers for each desktop.
 
+-- Enable/Disable this feature.
+local webDesktopEnabled = false
+
 -- Check whether these have already been launched, and keep track of the pids
 -- if they have not.
 local dpids = {}
-if execute_command("pgrep nw") ~= nil then
+if webDesktopEnabled and execute_command("pgrep nw") ~= nil then
     for s = 1, screen.count() do
         dpids[awful.util.spawn_with_shell("nw ~/Desktop "
               .. s .. " " .. screen[s].geometry.x)] = { screen = s }

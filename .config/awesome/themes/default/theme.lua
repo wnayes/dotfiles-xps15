@@ -4,7 +4,7 @@ theme.font          = "DejaVu Sans 8"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#444444"
-theme.bg_urgent     = "#DD0000"
+theme.bg_urgent     = "#AA3939"
 theme.bg_minimize   = "#333333"
 theme.bg_systray    = theme.bg_normal
 
@@ -28,8 +28,8 @@ theme.border_marked = "#91231c"
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Display the taglist squares
-theme.taglist_squares_sel   = "~/.config/awesome/themes/default/taglist/squarefw.png"
-theme.taglist_squares_unsel = "~/.config/awesome/themes/default/taglist/squarew.png"
+-- theme.taglist_squares_sel   = "~/.config/awesome/themes/default/taglist/squarefw.png"
+-- theme.taglist_squares_unsel = "~/.config/awesome/themes/default/taglist/squarew.png"
 
 -- Launcher menu variables
 theme.launcher_icon = "~/.config/awesome/themes/default/launcher.png"

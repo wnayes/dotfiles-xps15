@@ -14,10 +14,12 @@ export LANG=en_US.UTF-8
 export EDITOR=vim
 GPG_TTY=$(tty)
 export GPG_TTY
+export BOSE_ADDR=192.168.2.101
 
 # Aliases
 . ~/.aliases
 . ~/.wine_aliases
+. ~/.aliases_work
 
 # Prompt formatting
 #PS1='\u@\h \W\$ '

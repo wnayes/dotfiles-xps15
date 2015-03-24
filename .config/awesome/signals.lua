@@ -9,6 +9,9 @@ client.connect_signal("manage", function(c, startup)
         end
     end)
 
+    -- Update tag text
+    update_tags()
+
     if not startup then
         -- Set the windows at the slave,
         -- i.e. put it at the end of others instead of setting it master.
@@ -65,6 +68,19 @@ client.connect_signal("manage", function(c, startup)
 
         awful.titlebar(c):set_widget(layout)
     end
+end)
+
+client.connect_signal("unmanage", function(c)
+    -- Update tag text
+    update_tags()
+end)
+
+client.connect_signal("tagged", function(t)
+    update_tags()
+end)
+
+client.connect_signal("untagged", function(t)
+    update_tags()
 end)
 
 client.connect_signal("focus", function(c)
